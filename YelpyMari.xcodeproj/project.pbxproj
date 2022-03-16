@@ -134,18 +134,86 @@
 		5E410D4827B29A0D00E928D3 /* Restaurant Detail */ = {
 			isa = PBXGroup;
 			children = (
-				5E410D4B27B29BCD00E928D3 /* RestaurantDetailViewController.swift */,
-				994A3A1827E1903300E50CBA /* RestaurantDetailPresenter.swift */,
-				5E410D4F27B3E7DF00E928D3 /* RestaurantDetail.swift */,
+				994A3A2327E2412E00E50CBA /* Presenters */,
+				994A3A2227E2412800E50CBA /* Models */,
+				994A3A2127E2412100E50CBA /* Views & Controllers */,
 			);
 			path = "Restaurant Detail";
+			sourceTree = "<group>";
+		};
+		994A3A1E27E240C800E50CBA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				994A3A1627E1870000E50CBA /* RestaurantsListPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		994A3A1F27E240D000E50CBA /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99DA8F7D278F92940042681B /* RestaurantsViewController.swift */,
+				994A3A1A27E2293D00E50CBA /* RestaurantsViewControlling.swift */,
+				99DA8FAB278F9B320042681B /* RestaurantTableViewCell.swift */,
+				5E19EA4427B563CF0070328F /* RestaurantGridViewController.swift */,
+				5E410D5127B3EF6200E928D3 /* RestaurantCollectionCell.swift */,
+			);
+			path = "Views & Controllers";
+			sourceTree = "<group>";
+		};
+		994A3A2027E240F300E50CBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99DA8FAD278FC4BE0042681B /* RestaurantListItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		994A3A2127E2412100E50CBA /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E410D4B27B29BCD00E928D3 /* RestaurantDetailViewController.swift */,
+			);
+			path = "Views & Controllers";
+			sourceTree = "<group>";
+		};
+		994A3A2227E2412800E50CBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E410D4F27B3E7DF00E928D3 /* RestaurantDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		994A3A2327E2412E00E50CBA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				994A3A1827E1903300E50CBA /* RestaurantDetailPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		994A3A2427E2416900E50CBA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				994A3A1C27E2339900E50CBA /* RestaurantImagePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		994A3A2527E2417400E50CBA /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9979DCB827CFDD1100397C79 /* RestaurantImageViewController.swift */,
+			);
+			path = "Views & Controllers";
 			sourceTree = "<group>";
 		};
 		9979DCB527CFDC7400397C79 /* Restaurant Image */ = {
 			isa = PBXGroup;
 			children = (
-				9979DCB827CFDD1100397C79 /* RestaurantImageViewController.swift */,
-				994A3A1C27E2339900E50CBA /* RestaurantImagePresenter.swift */,
+				994A3A2527E2417400E50CBA /* Views & Controllers */,
+				994A3A2427E2416900E50CBA /* Presenters */,
 			);
 			path = "Restaurant Image";
 			sourceTree = "<group>";
@@ -153,13 +221,9 @@
 		9979DCB627CFDCB300397C79 /* Restaurant List */ = {
 			isa = PBXGroup;
 			children = (
-				99DA8F7D278F92940042681B /* RestaurantsViewController.swift */,
-				994A3A1A27E2293D00E50CBA /* RestaurantsViewControlling.swift */,
-				994A3A1627E1870000E50CBA /* RestaurantsListPresenter.swift */,
-				99DA8FAB278F9B320042681B /* RestaurantTableViewCell.swift */,
-				99DA8FAD278FC4BE0042681B /* RestaurantListItem.swift */,
-				5E19EA4427B563CF0070328F /* RestaurantGridViewController.swift */,
-				5E410D5127B3EF6200E928D3 /* RestaurantCollectionCell.swift */,
+				994A3A2027E240F300E50CBA /* Models */,
+				994A3A1F27E240D000E50CBA /* Views & Controllers */,
+				994A3A1E27E240C800E50CBA /* Presenters */,
 			);
 			path = "Restaurant List";
 			sourceTree = "<group>";
