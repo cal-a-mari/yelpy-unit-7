@@ -7,8 +7,14 @@
 
 import Foundation
 
-class RestaurantService {
-  static let shared = RestaurantService()
+protocol RestaurantServiceProtocol {
+  func fetchRestaurants(completion: @escaping (([RestaurantItem]) -> Void))
+  func fetchRestaurantDetail(id: String,
+                             completion: @escaping ((RestaurantDetail?) -> Void))
+}
+
+class RestaurantService: RestaurantServiceProtocol {
+  static let shared: RestaurantServiceProtocol = RestaurantService()
   let apikey = "2nByXAp9wFypmgkmhOPg59pVMB6gqrkCr-OhesGay4yuRcMCgUjlkZ_MrIYLmsqCTcInk95-c-nGlnBty94wJotYS6wH-U11ITi3kMzEFsZW0p08482t1TKE7V8CYnYx"
   let session = URLSession(configuration: .default,
                            delegate: nil,

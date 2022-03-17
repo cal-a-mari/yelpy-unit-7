@@ -21,9 +21,10 @@ class RestaurantsPresenter: RestaurantsPresenting {
   }
   weak var restaurantsController: RestaurantsController?
   
-  init(restaurantsController: RestaurantsController) {
+  init(restaurantsController: RestaurantsController,
+       restaurantService: RestaurantServiceProtocol = RestaurantService.shared) {
     self.restaurantsController = restaurantsController
-    RestaurantService.shared.fetchRestaurants { restaurants in
+    restaurantService.fetchRestaurants { restaurants in
       self.restaurants = restaurants
     }
   }

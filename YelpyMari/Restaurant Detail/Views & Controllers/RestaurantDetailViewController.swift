@@ -37,7 +37,7 @@ final class RestaurantDetailViewController: UIViewController,
   @IBOutlet weak var mapView: MKMapView!
   
   static func initialize(with restaurantID: String) -> RestaurantDetailViewController {
-    let viewController = UIStoryboard(name: "Main", bundle: nil)
+    let viewController = UIStoryboard(name: "Main", bundle: Bundle(for: RestaurantDetailViewController.self))
       .instantiateViewController(withIdentifier: "RestaurantDetailViewController") as! RestaurantDetailViewController
     viewController.presenter = RestaurantDetailPresenter(viewController: viewController,
                                                          restaurantID: restaurantID)
