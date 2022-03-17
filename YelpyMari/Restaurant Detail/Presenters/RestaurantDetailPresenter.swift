@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 protocol RestaurantDetailPresenting {
-  init(viewController: RestaurantDetailViewControlling,
+  init(viewController: RestaurantDetailController,
        restaurantID: String)
   func calloutAccessoryControlTapped()
 }
 
 class RestaurantDetailPresenter: RestaurantDetailPresenting,
                                  RestaurantImageSelectionDelegate {
-  private weak var viewController: RestaurantDetailViewControlling?
+  private weak var viewController: RestaurantDetailController?
   private let restaurantID: String
 
-  required init(viewController: RestaurantDetailViewControlling,
+  required init(viewController: RestaurantDetailController,
                 restaurantID: String) {
     self.viewController = viewController
     self.restaurantID = restaurantID

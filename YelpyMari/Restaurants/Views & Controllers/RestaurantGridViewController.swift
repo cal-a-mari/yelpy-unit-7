@@ -10,21 +10,23 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class RestaurantGridViewController: UICollectionViewController,
-                                    RestaurantsViewControlling {
-  private var presenter: RestaurantsListPresenting!
+                                    RestaurantsController {
+  private var presenter: RestaurantsPresenting!
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
-    presenter = RestaurantsListPresenter(restaurantsViewController: self)
+    presenter = RestaurantsPresenter(restaurantsController: self)
     navigationItem.title = "Restaurants"
   }
   
   // MARK: UICollectionViewDataSource  
-  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  override func collectionView(_ collectionView: UICollectionView,
+                               numberOfItemsInSection section: Int) -> Int {
     return presenter.restaurants.count
   }
   
-  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+  override func collectionView(_ collectionView: UICollectionView,
+                               didSelectItemAt indexPath: IndexPath) {
     presenter.didTapRestaurantAt(indexPath: indexPath)
   }
   

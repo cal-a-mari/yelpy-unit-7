@@ -18,7 +18,7 @@ class RestaurantTableViewCell: UITableViewCell {
   @IBOutlet weak var ratingLabel: UILabel!
   @IBOutlet weak var phoneNumberLabel: UILabel!
   
-  func configure(with restaurant: RestaurantListItem) {
+  func configure(with restaurant: RestaurantItem) {
     restaurantNameLabel.text = restaurant.name
     restaurantTypeLabel.text = restaurant.type
     ratingLabel.text = "Rating: \(String(restaurant.rating))"

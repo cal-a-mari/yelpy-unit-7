@@ -19,9 +19,9 @@ protocol RestaurantImagePresenting {
 
 class RestaurantImagePresenter: RestaurantImagePresenting {
   weak var imageSelectionDelegate: RestaurantImageSelectionDelegate?
-  weak var viewController: RestaurantImageViewControlling?
+  weak var viewController: RestaurantImageController?
   
-  init(viewController: RestaurantImageViewController) {
+  init(viewController: RestaurantImageController) {
     self.viewController = viewController
   }
   

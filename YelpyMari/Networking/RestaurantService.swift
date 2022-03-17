@@ -13,7 +13,7 @@ class RestaurantService {
   let session = URLSession(configuration: .default,
                            delegate: nil,
                            delegateQueue: .main)
-  func fetchRestaurants(completion: @escaping (([RestaurantListItem]) -> Void)) {
+  func fetchRestaurants(completion: @escaping (([RestaurantItem]) -> Void)) {
     // Coordinates for San Francisco
     let lat = 37.773972
     let long = -122.431297
@@ -32,9 +32,9 @@ class RestaurantService {
       } else if let data = data {
         let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
         let restaurantsRawData = dataDictionary["businesses"] as! [[String: Any]]
-        var restaurants = [RestaurantListItem]()
+        var restaurants = [RestaurantItem]()
         for rawData in restaurantsRawData {
-          let restaurant = RestaurantListItem(id: rawData["id"] as! String,
+          let restaurant = RestaurantItem(id: rawData["id"] as! String,
                                               name: rawData["name"] as! String,
                                               type: (rawData["categories"] as! [[String: String]])[0]["title"]!,
                                               rating: (rawData["rating"] as! NSNumber).intValue,

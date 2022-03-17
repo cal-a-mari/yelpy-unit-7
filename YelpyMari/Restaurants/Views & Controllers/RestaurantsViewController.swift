@@ -10,13 +10,13 @@ import UIKit
 class RestaurantsViewController: UIViewController,
                                  UITableViewDelegate,
                                  UITableViewDataSource,
-                                 RestaurantsViewControlling {
+                                 RestaurantsController {
   @IBOutlet weak var tableView: UITableView!
-  private var presenter: RestaurantsListPresenting!
+  private var presenter: RestaurantsPresenting!
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
-    presenter = RestaurantsListPresenter(restaurantsViewController: self)
+    presenter = RestaurantsPresenter(restaurantsController: self)
     navigationItem.title = "Restaurants"
   }
   

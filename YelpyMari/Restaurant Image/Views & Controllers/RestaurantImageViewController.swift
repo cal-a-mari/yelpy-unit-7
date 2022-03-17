@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol RestaurantImageViewControlling: AnyObject {
+protocol RestaurantImageController: AnyObject {
   func showImagePicker()
   func setChosenImage(_ image: UIImage)
   func dismiss()
 }
 
 class RestaurantImageViewController: UIViewController,
-                                     RestaurantImageViewControlling {
+                                     RestaurantImageController {
   
   @IBOutlet private weak var imageView: UIImageView!
   @IBOutlet private weak var chooseImageButton: UIButton!

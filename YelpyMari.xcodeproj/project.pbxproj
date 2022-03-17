@@ -13,9 +13,9 @@
 		5E410D4D27B29BCD00E928D3 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E410D4B27B29BCD00E928D3 /* RestaurantDetailViewController.swift */; };
 		5E410D5027B3E7DF00E928D3 /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E410D4F27B3E7DF00E928D3 /* RestaurantDetail.swift */; };
 		5E410D5227B3EF6200E928D3 /* RestaurantCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E410D5127B3EF6200E928D3 /* RestaurantCollectionCell.swift */; };
-		994A3A1727E1870000E50CBA /* RestaurantsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1627E1870000E50CBA /* RestaurantsListPresenter.swift */; };
+		994A3A1727E1870000E50CBA /* RestaurantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1627E1870000E50CBA /* RestaurantsPresenter.swift */; };
 		994A3A1927E1903300E50CBA /* RestaurantDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1827E1903300E50CBA /* RestaurantDetailPresenter.swift */; };
-		994A3A1B27E2293D00E50CBA /* RestaurantsViewControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1A27E2293D00E50CBA /* RestaurantsViewControlling.swift */; };
+		994A3A1B27E2293D00E50CBA /* RestaurantsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1A27E2293D00E50CBA /* RestaurantsController.swift */; };
 		994A3A1D27E2339900E50CBA /* RestaurantImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A3A1C27E2339900E50CBA /* RestaurantImagePresenter.swift */; };
 		9979DCB427CFD35800397C79 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979DCB327CFD35800397C79 /* MapKit.framework */; };
 		9979DCB927CFDD1100397C79 /* RestaurantImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979DCB827CFDD1100397C79 /* RestaurantImageViewController.swift */; };
@@ -61,9 +61,9 @@
 		6C14709C76E9B60CA30EF566 /* Pods-YelpyMari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpyMari.debug.xcconfig"; path = "Target Support Files/Pods-YelpyMari/Pods-YelpyMari.debug.xcconfig"; sourceTree = "<group>"; };
 		837718A49FE36653167CFD36 /* Pods_YelpyMari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YelpyMari.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		983C9E65B7848C253A0BA2D2 /* Pods-YelpyMariTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpyMariTests.debug.xcconfig"; path = "Target Support Files/Pods-YelpyMariTests/Pods-YelpyMariTests.debug.xcconfig"; sourceTree = "<group>"; };
-		994A3A1627E1870000E50CBA /* RestaurantsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListPresenter.swift; sourceTree = "<group>"; };
+		994A3A1627E1870000E50CBA /* RestaurantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsPresenter.swift; sourceTree = "<group>"; };
 		994A3A1827E1903300E50CBA /* RestaurantDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailPresenter.swift; sourceTree = "<group>"; };
-		994A3A1A27E2293D00E50CBA /* RestaurantsViewControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewControlling.swift; sourceTree = "<group>"; };
+		994A3A1A27E2293D00E50CBA /* RestaurantsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsController.swift; sourceTree = "<group>"; };
 		994A3A1C27E2339900E50CBA /* RestaurantImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantImagePresenter.swift; sourceTree = "<group>"; };
 		9971E3B75D9645719114AE8C /* Pods-YelpyMari-YelpyMariUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpyMari-YelpyMariUITests.debug.xcconfig"; path = "Target Support Files/Pods-YelpyMari-YelpyMariUITests/Pods-YelpyMari-YelpyMariUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9979DCB327CFD35800397C79 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -144,7 +144,7 @@
 		994A3A1E27E240C800E50CBA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				994A3A1627E1870000E50CBA /* RestaurantsListPresenter.swift */,
+				994A3A1627E1870000E50CBA /* RestaurantsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				99DA8F7D278F92940042681B /* RestaurantsViewController.swift */,
-				994A3A1A27E2293D00E50CBA /* RestaurantsViewControlling.swift */,
+				994A3A1A27E2293D00E50CBA /* RestaurantsController.swift */,
 				99DA8FAB278F9B320042681B /* RestaurantTableViewCell.swift */,
 				5E19EA4427B563CF0070328F /* RestaurantGridViewController.swift */,
 				5E410D5127B3EF6200E928D3 /* RestaurantCollectionCell.swift */,
@@ -218,14 +218,14 @@
 			path = "Restaurant Image";
 			sourceTree = "<group>";
 		};
-		9979DCB627CFDCB300397C79 /* Restaurant List */ = {
+		9979DCB627CFDCB300397C79 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
 				994A3A2027E240F300E50CBA /* Models */,
 				994A3A1F27E240D000E50CBA /* Views & Controllers */,
 				994A3A1E27E240C800E50CBA /* Presenters */,
 			);
-			path = "Restaurant List";
+			path = Restaurants;
 			sourceTree = "<group>";
 		};
 		9979DCB727CFDCDD00397C79 /* Networking */ = {
@@ -261,7 +261,7 @@
 		99DA8F78278F92940042681B /* YelpyMari */ = {
 			isa = PBXGroup;
 			children = (
-				9979DCB627CFDCB300397C79 /* Restaurant List */,
+				9979DCB627CFDCB300397C79 /* Restaurants */,
 				5E410D4827B29A0D00E928D3 /* Restaurant Detail */,
 				9979DCB527CFDC7400397C79 /* Restaurant Image */,
 				9979DCB727CFDCDD00397C79 /* Networking */,
@@ -546,10 +546,10 @@
 				99DA8FAE278FC4BE0042681B /* RestaurantListItem.swift in Sources */,
 				9979DCB927CFDD1100397C79 /* RestaurantImageViewController.swift in Sources */,
 				99DA8FAC278F9B320042681B /* RestaurantTableViewCell.swift in Sources */,
-				994A3A1B27E2293D00E50CBA /* RestaurantsViewControlling.swift in Sources */,
+				994A3A1B27E2293D00E50CBA /* RestaurantsController.swift in Sources */,
 				99DA8F7E278F92940042681B /* RestaurantsViewController.swift in Sources */,
 				99DA8F7A278F92940042681B /* AppDelegate.swift in Sources */,
-				994A3A1727E1870000E50CBA /* RestaurantsListPresenter.swift in Sources */,
+				994A3A1727E1870000E50CBA /* RestaurantsPresenter.swift in Sources */,
 				99DA8FB0278FC6930042681B /* RestaurantService.swift in Sources */,
 				5E410D5027B3E7DF00E928D3 /* RestaurantDetail.swift in Sources */,
 				5E410D4D27B29BCD00E928D3 /* RestaurantDetailViewController.swift in Sources */,

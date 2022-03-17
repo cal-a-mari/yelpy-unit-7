@@ -9,14 +9,14 @@ import AlamofireImage
 import UIKit
 import MapKit
 
-protocol RestaurantDetailViewControlling: AnyObject {
+protocol RestaurantDetailController: AnyObject {
   func setLeftCalloutAccessoryButton(with image: UIImage)
   func configure(with restaurant: RestaurantDetail)
   func navigate(to viewController: UIViewController)
 }
 
 final class RestaurantDetailViewController: UIViewController,
-                                            RestaurantDetailViewControlling {
+                                            RestaurantDetailController {
   private var presenter: RestaurantDetailPresenting!
   /// Photo URLs to be use for fetching Restaurant images
   private var photoURLs: [String] = []
